@@ -1,5 +1,5 @@
 ---
-consul_version: 0.6.3
+consul_version: 0.9.3
 consul_archive: "consul_{{ consul_version }}_linux_amd64.zip"
 consul_download: "https://releases.hashicorp.com/consul/{{ consul_version }}/{{ consul_archive }}"
 consul_download_username: ""
@@ -95,6 +95,10 @@ consul_client_address: "127.0.0.1"
 consul_client_address_bind: false
 consul_datacenter: "default"
 consul_disable_remote_exec: true
+
+consul_address_dns: "127.0.0.1"
+consul_address_http: "127.0.0.1"
+consul_address_https: "127.0.0.1"
 
 consul_port_dns: 8600
 consul_port_http: 8500

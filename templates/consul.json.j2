@@ -98,6 +98,11 @@
   "ca_file": "{{ consul_ca_file }}",
   "verify_outgoing": true,
 {% endif %}
+  "addresses": {
+    "dns": "{{ consul_address_dns }}",
+    "http": "{{ consul_address_http }}",
+    "https": "{{ consul_address_https }}"
+  },
   "ports": {
     "dns": {{ consul_port_dns }},
     "http": {{ consul_port_http }},
