@@ -68,6 +68,9 @@
 {% if consul_advertise_address_wan|default(false) %}
   "advertise_addr_wan": "{{ consul_advertise_address_wan }}",
 {% endif %}
+{% if consul_translate_wan_addrs %}
+  "translate_wan_addrs": true,
+{% endif %}
   "datacenter": "{{ consul_datacenter }}",
 {% if consul_is_server and consul_bootstrap is defined %}
   "bootstrap": {{ "true" if consul_bootstrap else "false" }},
